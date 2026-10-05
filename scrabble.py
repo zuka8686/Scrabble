@@ -33,3 +33,16 @@ vardnica={
     'z' : 2,
     'ž' : 3 
     }
+
+vards = input("Ievadiet savu vārdu: ")
+
+def parbaudit(word):
+    summa = 0
+    for burts in word:
+        if burts in vardnica.keys():
+            summa+=vardnica[burts]
+    return summa
+
+rezultats = parbaudit(vards)
+
+print(f"Par šo vārdu jums ir {rezultats} punkti")
